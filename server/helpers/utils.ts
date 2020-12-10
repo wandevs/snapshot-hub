@@ -45,10 +45,14 @@ export async function verifySignature(
   hash: string
   // chainId: number
 ): Promise<boolean> {
+  console.log('verifySignature 1', address)
   const rpcUrl =
     'https://gwan-ssl.wandevs.org:56891';
   const provider = new providers.JsonRpcProvider(rpcUrl);
+  console.log('verifySignature 2')
   const bytecode = await provider.getCode(address);
+  console.log('verifySignature 3', bytecode)
+  
   if (
     !bytecode ||
     bytecode === '0x' ||
