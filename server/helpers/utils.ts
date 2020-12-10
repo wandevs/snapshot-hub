@@ -46,7 +46,7 @@ export async function verifySignature(
   // chainId: number
 ): Promise<boolean> {
   const rpcUrl =
-    'https://eth-mainnet.alchemyapi.io/v2/4bdDVB5QAaorY2UE-GBUbM2yQB3QJqzv';
+    'https://gwan-ssl.wandevs.org:56891';
   const provider = new providers.JsonRpcProvider(rpcUrl);
   const bytecode = await provider.getCode(address);
   if (
